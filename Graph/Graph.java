@@ -33,34 +33,6 @@ public class Graph // Класс, представляющий собой гра
         graphNode.getEdges().add(graphNode.getCountEdge(), graphEdge); // Добавляем в массив рёбер новое ребро
         return true;
     }
-    /*public int decisionTreeWay(GraphNode start, GraphNode end)
-    {
-        if (!graphHashMap.containsValue(start) || !graphHashMap.containsValue(end))
-            throw new NullPointerException("One of the nodes of the graph does not exist");
-        if (start == end || start.getEdges().isEmpty())
-            return 0;
-        int[][] matrix = new int[graphHashMap.size()][graphHashMap.size()];
-        GraphNode current = start;
-        int summ = 0;
-        Stack<GraphNode> stack = new Stack<>();
-        stack.push(current);
-        Stack<List<Integer>> ways = new Stack<>();
-        List<Integer> way = new ArrayList<>();
-        //HashMap<Integer, GraphNode> passedNodes = new HashMap<>();
-        //passedNodes.put(current.getData(), current);
-        while (!stack.isEmpty())
-        {
-            current = stack.peek();
-            for (int i = 0; i < current.getEdges().size(); i++)
-            {
-                stack.push(current.getEdges().get(i).getGraphNode());
-                way.add(current.getEdges().get(i).getGraphNode().getData());
-            }
-            if (current == end)
-                ways.add(way);
-        }
-        return 0;
-    }*/
     private DecisionTreeNode buildDecisionTree(int startData) throws NullPointerException // Метод построения дерева решений
     {
         if (!graphHashMap.containsKey(startData)) // Если такой вершины не существует в графе
